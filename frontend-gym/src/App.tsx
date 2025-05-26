@@ -1,10 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import DashboardA from './Components/Pages/administrator/DashboardA';
 import Membresias from './Components/Pages/membresias/Membresias';
 import DashboardUsuarios from './Components/Pages/users/DashboardUsuarios';
 import DashboardInventario from './Components/Pages/inventario/DashboardInventario';
-import DashboardS from './Components/Pages/DashboardS';
 import NuevoUsuario from './Components/Pages/users/NuevoUsuario';
+
 
 const datosEjemplo = [
   { documento: '12345678', nombre: 'Juan Pérez', tipo: 'Premium', vencimiento: '2025-01-01',estado:true },
@@ -48,12 +49,13 @@ const datosInventario = [
   // ... más datos
 ];
 
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/dashboard" element={<DashboardA />} />
-        <Route path="/dashboarddd" element={<DashboardS />} />
+
         <Route
           path="/membresias"
           element={
