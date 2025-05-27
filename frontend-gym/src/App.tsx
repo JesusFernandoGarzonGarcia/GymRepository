@@ -5,6 +5,8 @@ import Membresias from './Components/Pages/membresias/Membresias';
 import DashboardUsuarios from './Components/Pages/users/DashboardUsuarios';
 import DashboardInventario from './Components/Pages/inventario/DashboardInventario';
 import NuevoUsuario from './Components/Pages/users/NuevoUsuario';
+import DetailsProducto from './Components/Pages/inventario/ProductosDetails';
+import DetallesProducto from './Components/Pages/inventario/ProductosDetails';
 
 
 const datosEjemplo = [
@@ -83,6 +85,26 @@ function App() {
             totalSuplementos={datosInventario.filter(dato => dato.tipoProducto.toLowerCase()==="Suplemento".toLowerCase()).length}
             totalAccesorios={datosInventario.filter(dato => dato.tipoProducto.toLowerCase()==="Accesorio".toLowerCase()).length}
               datos={datosInventario}
+            />
+          }
+        />
+
+<Route
+          path="/detailsProducto"
+          element={
+            <DetallesProducto
+            producto={{
+              codigo: 'PRD001',
+              nombre: 'Producto de prueba',
+              proveedor: 'Proveedor S.A.',
+              stockInicial: 100,
+              descripcion: 'Un producto muy útil',
+              fechaVencimiento: '2026-05-01',
+              precioCompra: '$5.00',
+              precioVenta: '$10.00',
+              lote: 'L-456'
+            }}
+          
             />
           }
         />
